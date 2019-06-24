@@ -4,6 +4,8 @@
   "description": "A CRUD app using React that interfaces with a RESTful API powered by Node (with Express) and a database (MySQL).",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
+    "webpack": "./node_modules/.bin/webpack -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,9 +27,16 @@
     "mysql": "^2.17.1",
     "nodemon": "^1.19.1",
     "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "webpack": "^4.35.0"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.0.0",
     "webpack-cli": "^3.3.5"
   }
 }

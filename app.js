@@ -32,4 +32,6 @@ app.get('/api/cows', (req, res) => {
   });
 });
 
+app.use(express.static(__dirname + './client'));
+
 app.listen(port, () => console.log(`Cowlist app listening on port ${port}!`));
