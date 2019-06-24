@@ -9,11 +9,17 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/cows', (req, res) => {
-  res.send('Got a post request!');
+  models.set( (err, result) => {
+    if (err) {
+      res.status(400).send(`ERROR: MMMOOooooooooo, ${err}`);
+    } else {
+      res.json(result);
+    }
+  });
 });
 
 app.get('/api/cows', (req, res) => {
-  models.get((err, result) => {
+  models.get( (err, result) => {
     if (err) {
       res.status(400).send(`ERROR: MMMOOooooooooo, ${err}`);
     } else {
